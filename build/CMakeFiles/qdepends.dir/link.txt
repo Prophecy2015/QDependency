@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\qdepends.dir/objects.a
+D:\DevelopTools\mingw64\bin\ar.exe qc CMakeFiles\qdepends.dir/objects.a @CMakeFiles\qdepends.dir\objects1.rsp
+D:\DevelopTools\mingw64\bin\c++.exe -O3 -DNDEBUG -mwindows -Wl,--whole-archive CMakeFiles\qdepends.dir/objects.a -Wl,--no-whole-archive -o qdepends.exe -Wl,--out-implib,libqdepends.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\qdepends.dir\linkLibs.rsp

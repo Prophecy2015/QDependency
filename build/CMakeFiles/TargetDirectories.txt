@@ -1,0 +1,12 @@
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/qdepends.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/pedump.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/QDepends_lupdate.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/update_translations.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/QDepends_lrelease.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/release_translations.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/edit_cache.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/rebuild_cache.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/qdepends_autogen_timestamp_deps.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/qdepends_autogen.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/pedump_autogen_timestamp_deps.dir
+D:/Work/AIAssistent/Dependency/build/CMakeFiles/pedump_autogen.dir

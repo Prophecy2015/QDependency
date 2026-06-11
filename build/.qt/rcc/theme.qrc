@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="resources/theme/dark.qss">D:/Work/AIAssistent/Dependency/resources/theme/dark.qss</file>
+  </qresource>
+</RCC>
+

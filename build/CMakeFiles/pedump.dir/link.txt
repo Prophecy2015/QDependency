@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\pedump.dir/objects.a
+D:\DevelopTools\mingw64\bin\ar.exe qc CMakeFiles\pedump.dir/objects.a @CMakeFiles\pedump.dir\objects1.rsp
+D:\DevelopTools\mingw64\bin\c++.exe -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles\pedump.dir/objects.a -Wl,--no-whole-archive -o pedump.exe -Wl,--out-implib,libpedump.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\pedump.dir\linkLibs.rsp
