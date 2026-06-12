@@ -4,6 +4,7 @@
 #include "session/sessionserializer.h"
 #include "ui/disasmdialog.h"
 #include "ui/findbar.h"
+#include "ui/headerinfodialog.h"
 #include "ui/iconfactory.h"
 #include "ui/logwidget.h"
 #include "ui/panetitlebar.h"
@@ -667,12 +668,15 @@ void MainWindow::showTreeContextMenu(const QPoint &pos)
     QAction *openExplorer = menu.addAction(tr("Show in Explorer"));
     QAction *extViewer = menu.addAction(tr("View Module in External Viewer"));
     menu.addSeparator();
+    QAction *headerInfo = menu.addAction(tr("Header Information..."));
     QAction *locate = menu.addAction(tr("Locate in Module List"));
 
     const bool hasPath = !node->resolvedPath.isEmpty();
+    const bool hasPe = node->pe && node->pe->valid;
     copyPath->setEnabled(hasPath);
     openExplorer->setEnabled(hasPath);
     extViewer->setEnabled(hasPath);
+    headerInfo->setEnabled(hasPe);
 
     QAction *chosen = menu.exec(m_tree->viewport()->mapToGlobal(pos));
     if (chosen == expandSub) {
@@ -690,6 +694,9 @@ void MainWindow::showTreeContextMenu(const QPoint &pos)
                                  QDir::toNativeSeparators(node->resolvedPath)});
     } else if (chosen == extViewer) {
         launchExternalViewer(node->resolvedPath);
+    } else if (chosen == headerInfo) {
+        auto *dialog = new HeaderInfoDialog(node->pe, this);
+        dialog->show();
     } else if (chosen == locate) {
         const QString key = node->moduleKey();
         for (int row = 0; row < m_moduleProxy->rowCount(); ++row) {

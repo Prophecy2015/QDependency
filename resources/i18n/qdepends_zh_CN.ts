@@ -2,6 +2,193 @@
 <!DOCTYPE TS []>
 <TS version="2.1" language="zh_CN">
   <context>
+    <name>QObject</name>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="100" />
+      <source>File</source>
+      <translation>文件</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="101" />
+      <source>Path</source>
+      <translation>路径</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="102" />
+      <source>Size</source>
+      <translation>大小</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="104" />
+      <source>Modified</source>
+      <translation>修改时间</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="106" />
+      <source>Attributes</source>
+      <translation>属性</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="108" />
+      <source>File Version</source>
+      <translation>文件版本</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="110" />
+      <source>Product Version</source>
+      <translation>产品版本</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="112" />
+      <source>COFF Header</source>
+      <translation>COFF 头</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="113" />
+      <source>Machine</source>
+      <translation>机器类型</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="115" />
+      <source>Format</source>
+      <translation>格式</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="117" />
+      <source>Link Time Stamp</source>
+      <translation>链接时间戳</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="118" />
+      <source>Characteristics</source>
+      <translation>特征标志</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="123" />
+      <source>Optional Header</source>
+      <translation>可选头</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="124" />
+      <source>Subsystem</source>
+      <translation>子系统</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="125" />
+      <source>Preferred Base</source>
+      <translation>首选基址</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="126" />
+      <source>Size of Image</source>
+      <translation>映像大小</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="127" />
+      <source>Linker Version</source>
+      <translation>链接器版本</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="128" />
+      <source>OS Version</source>
+      <translation>OS 版本</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="129" />
+      <source>Image Version</source>
+      <translation>映像版本</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="130" />
+      <source>Subsystem Version</source>
+      <translation>子系统版本</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="131" />
+      <source>Link Checksum</source>
+      <translation>链接校验和</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="132" />
+      <source>Real Checksum</source>
+      <translation>实际校验和</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="135" />
+      <source>(OK)</source>
+      <translation>（一致）</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="135" />
+      <source>(MISMATCH)</source>
+      <translation>（不一致）</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="136" />
+      <source>DLL Characteristics</source>
+      <translation>DLL 特征标志</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="141" />
+      <source>Contents</source>
+      <translation>内容</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="142" />
+      <source>Image Type</source>
+      <translation>映像类型</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="143" />
+      <source>Managed (.NET)</source>
+      <translation>托管 (.NET)</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="143" />
+      <location filename="../../src/ui/headerinfodialog.cpp" line="144" />
+      <location filename="../../src/ui/headerinfodialog.cpp" line="147" />
+      <source>Yes</source>
+      <translation>是</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="143" />
+      <location filename="../../src/ui/headerinfodialog.cpp" line="144" />
+      <location filename="../../src/ui/headerinfodialog.cpp" line="147" />
+      <source>No</source>
+      <translation>否</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="144" />
+      <source>Thread Local Storage</source>
+      <translation>线程局部存储 (TLS)</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="145" />
+      <source>Debug Symbols</source>
+      <translation>调试符号</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="146" />
+      <source>Embedded Manifest</source>
+      <translation>内嵌清单</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="148" />
+      <source>Export Count</source>
+      <translation>导出数量</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="152" />
+      <source>Import Modules</source>
+      <translation>导入模块数</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="153" />
+      <source>Imported Functions</source>
+      <translation>导入函数数</translation>
+    </message>
+  </context>
+  <context>
     <name>session::ExportModel</name>
     <message>
       <location filename="../../src/session/exportmodel.cpp" line="118" />
@@ -243,6 +430,24 @@
     </message>
   </context>
   <context>
+    <name>ui::HeaderInfoDialog</name>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="162" />
+      <source>Header Information — %1</source>
+      <translation>头部信息 — %1</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="177" />
+      <source>Copy</source>
+      <translation>复制</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/headerinfodialog.cpp" line="178" />
+      <source>Close</source>
+      <translation>关闭</translation>
+    </message>
+  </context>
+  <context>
     <name>ui::LogWidget</name>
     <message>
       <location filename="../../src/ui/logwidget.cpp" line="57" />
@@ -263,360 +468,365 @@
   <context>
     <name>ui::MainWindow</name>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="103" />
-      <location filename="../../src/ui/mainwindow.cpp" line="439" />
+      <location filename="../../src/ui/mainwindow.cpp" line="104" />
+      <location filename="../../src/ui/mainwindow.cpp" line="440" />
       <source>Analyzing %1...</source>
       <translation>正在分析 %1...</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="120" />
+      <location filename="../../src/ui/mainwindow.cpp" line="121" />
       <source>Dependency Tree</source>
       <translation>依赖树</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="149" />
-      <location filename="../../src/ui/mainwindow.cpp" line="574" />
+      <location filename="../../src/ui/mainwindow.cpp" line="150" />
+      <location filename="../../src/ui/mainwindow.cpp" line="575" />
       <source>Parent Imports</source>
       <translation>父导入</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="154" />
-      <location filename="../../src/ui/mainwindow.cpp" line="575" />
+      <location filename="../../src/ui/mainwindow.cpp" line="155" />
+      <location filename="../../src/ui/mainwindow.cpp" line="576" />
       <source>Exports</source>
       <translation>导出</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="160" />
+      <location filename="../../src/ui/mainwindow.cpp" line="161" />
       <source>Module List</source>
       <translation>模块列表</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="163" />
+      <location filename="../../src/ui/mainwindow.cpp" line="164" />
       <source>Log</source>
       <translation>日志</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="212" />
+      <location filename="../../src/ui/mainwindow.cpp" line="213" />
       <source>&amp;File</source>
       <translation>文件(&amp;F)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="214" />
+      <location filename="../../src/ui/mainwindow.cpp" line="215" />
       <source>&amp;Open...</source>
       <translation>打开(&amp;O)...</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="216" />
+      <location filename="../../src/ui/mainwindow.cpp" line="217" />
       <source>Open PE File</source>
       <translation>打开 PE 文件</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="217" />
+      <location filename="../../src/ui/mainwindow.cpp" line="218" />
       <source>PE Files (*.exe *.dll *.sys *.ocx *.cpl *.drv *.scr *.mui *.ax *.efi);;QDepends Session (*.qds);;All Files (*)</source>
       <translation>PE 文件 (*.exe *.dll *.sys *.ocx *.cpl *.drv *.scr *.mui *.ax *.efi);;QDepends 会话 (*.qds);;所有文件 (*)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="225" />
+      <location filename="../../src/ui/mainwindow.cpp" line="226" />
       <source>&amp;Save Session As...</source>
       <translation>会话另存为(&amp;S)...</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="227" />
+      <location filename="../../src/ui/mainwindow.cpp" line="228" />
       <source>Save Report As &amp;Text...</source>
       <translation>报告另存为文本(&amp;T)...</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="229" />
+      <location filename="../../src/ui/mainwindow.cpp" line="230" />
       <source>Export Module List As &amp;CSV...</source>
       <translation>导出模块列表为 CSV(&amp;C)...</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="232" />
+      <location filename="../../src/ui/mainwindow.cpp" line="233" />
       <source>&amp;Recent Files</source>
       <translation>最近打开(&amp;R)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="234" />
+      <location filename="../../src/ui/mainwindow.cpp" line="235" />
       <source>E&amp;xit</source>
       <translation>退出(&amp;X)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="237" />
+      <location filename="../../src/ui/mainwindow.cpp" line="238" />
       <source>&amp;Edit</source>
       <translation>编辑(&amp;E)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="238" />
+      <location filename="../../src/ui/mainwindow.cpp" line="239" />
       <source>&amp;Copy</source>
       <translation>复制(&amp;C)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="241" />
+      <location filename="../../src/ui/mainwindow.cpp" line="242" />
       <source>&amp;Find...</source>
       <translation>查找(&amp;F)...</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="246" />
+      <location filename="../../src/ui/mainwindow.cpp" line="247" />
       <source>Find &amp;Next</source>
       <translation>查找下一个(&amp;N)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="248" />
+      <location filename="../../src/ui/mainwindow.cpp" line="249" />
       <source>Find &amp;Previous</source>
       <translation>查找上一个(&amp;P)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="254" />
+      <location filename="../../src/ui/mainwindow.cpp" line="255" />
       <source>Clear &amp;Log</source>
       <translation>清空日志(&amp;L)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="257" />
+      <location filename="../../src/ui/mainwindow.cpp" line="258" />
       <source>&amp;View</source>
       <translation>视图(&amp;V)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="259" />
+      <location filename="../../src/ui/mainwindow.cpp" line="260" />
       <source>Full &amp;Paths</source>
       <translation>完整路径(&amp;P)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="268" />
+      <location filename="../../src/ui/mainwindow.cpp" line="269" />
       <source>&amp;Undecorate C++ Functions</source>
       <translation>反修饰 C++ 函数名(&amp;U)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="277" />
+      <location filename="../../src/ui/mainwindow.cpp" line="278" />
       <source>&amp;Expand All</source>
       <translation>全部展开(&amp;E)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="280" />
+      <location filename="../../src/ui/mainwindow.cpp" line="281" />
       <source>Co&amp;llapse All</source>
       <translation>全部折叠(&amp;L)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="284" />
+      <location filename="../../src/ui/mainwindow.cpp" line="285" />
       <source>&amp;Refresh</source>
       <translation>刷新(&amp;R)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="298" />
+      <location filename="../../src/ui/mainwindow.cpp" line="299" />
       <source>Show Parent &amp;Imports Pane</source>
       <translation>显示父导入窗格(&amp;I)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="299" />
+      <location filename="../../src/ui/mainwindow.cpp" line="300" />
       <source>Show Export&amp;s Pane</source>
       <translation>显示导出窗格(&amp;S)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="300" />
+      <location filename="../../src/ui/mainwindow.cpp" line="301" />
       <source>Show &amp;Module List Pane</source>
       <translation>显示模块列表窗格(&amp;M)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="301" />
+      <location filename="../../src/ui/mainwindow.cpp" line="302" />
       <source>Show Lo&amp;g Pane</source>
       <translation>显示日志窗格(&amp;G)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="304" />
+      <location filename="../../src/ui/mainwindow.cpp" line="305" />
       <source>System &amp;Information...</source>
       <translation>系统信息(&amp;I)...</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="310" />
+      <location filename="../../src/ui/mainwindow.cpp" line="311" />
       <source>&amp;Options</source>
       <translation>选项(&amp;O)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="311" />
+      <location filename="../../src/ui/mainwindow.cpp" line="312" />
       <source>Configure &amp;External Viewer...</source>
       <translation>配置外部查看器(&amp;E)...</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="315" />
+      <location filename="../../src/ui/mainwindow.cpp" line="316" />
       <source>&amp;Help</source>
       <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="316" />
+      <location filename="../../src/ui/mainwindow.cpp" line="317" />
       <source>&amp;About QDepends</source>
       <translation>关于 QDepends(&amp;A)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="318" />
+      <location filename="../../src/ui/mainwindow.cpp" line="319" />
       <source>About QDepends</source>
       <translation>关于 QDepends</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="319" />
+      <location filename="../../src/ui/mainwindow.cpp" line="320" />
       <source>&lt;b&gt;QDepends 1.0&lt;/b&gt;&lt;br/&gt;A static PE dependency analyzer, functionally aligned with Dependency Walker.&lt;br/&gt;&lt;br/&gt;Supports 32-bit (PE32) and 64-bit (PE32+) modules, API set redirection, KnownDLLs, side-by-side manifests and forwarded exports.&lt;br/&gt;&lt;br/&gt;Built with Qt %1.</source>
       <translation>&lt;b&gt;QDepends 1.0&lt;/b&gt;&lt;br/&gt;静态 PE 依赖分析工具，功能对齐 Dependency Walker。&lt;br/&gt;&lt;br/&gt;支持 32 位 (PE32) 与 64 位 (PE32+) 模块、API Set 重定向、KnownDLLs、SxS 清单及转发导出。&lt;br/&gt;&lt;br/&gt;基于 Qt %1 构建。</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="328" />
+      <location filename="../../src/ui/mainwindow.cpp" line="329" />
       <source>Main</source>
       <translation>主工具栏</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="343" />
-      <location filename="../../src/ui/mainwindow.cpp" line="467" />
+      <location filename="../../src/ui/mainwindow.cpp" line="344" />
+      <location filename="../../src/ui/mainwindow.cpp" line="468" />
       <source>Ready</source>
       <translation>就绪</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="419" />
-      <location filename="../../src/ui/mainwindow.cpp" line="430" />
-      <location filename="../../src/ui/mainwindow.cpp" line="827" />
-      <location filename="../../src/ui/mainwindow.cpp" line="842" />
-      <location filename="../../src/ui/mainwindow.cpp" line="901" />
+      <location filename="../../src/ui/mainwindow.cpp" line="420" />
+      <location filename="../../src/ui/mainwindow.cpp" line="431" />
+      <location filename="../../src/ui/mainwindow.cpp" line="834" />
+      <location filename="../../src/ui/mainwindow.cpp" line="849" />
+      <location filename="../../src/ui/mainwindow.cpp" line="908" />
       <source>QDepends</source>
       <translation>QDepends</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="419" />
+      <location filename="../../src/ui/mainwindow.cpp" line="420" />
       <source>File not found: %1</source>
       <translation>未找到文件: %1</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="431" />
+      <location filename="../../src/ui/mainwindow.cpp" line="432" />
       <source>Cannot load session: %1</source>
       <translation>无法加载会话: %1</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="477" />
+      <location filename="../../src/ui/mainwindow.cpp" line="478" />
       <source>Modules: %1   Errors: %2   Warnings: %3</source>
       <translation>模块: %1   错误: %2   警告: %3</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="502" />
+      <location filename="../../src/ui/mainwindow.cpp" line="503" />
       <source>Module not found</source>
       <translation>未找到模块</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="507" />
+      <location filename="../../src/ui/mainwindow.cpp" line="508" />
       <source>Delay-load dependency</source>
       <translation>延迟加载依赖</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="509" />
+      <location filename="../../src/ui/mainwindow.cpp" line="510" />
       <source>Forwarded dependency</source>
       <translation>转发依赖</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="511" />
+      <location filename="../../src/ui/mainwindow.cpp" line="512" />
       <source>Duplicate module (already expanded above)</source>
       <translation>重复模块（已在上方展开）</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="580" />
+      <location filename="../../src/ui/mainwindow.cpp" line="581" />
       <source>Parent Imports — %1 ← %2</source>
       <translation>父导入 — %1 ← %2</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="584" />
+      <location filename="../../src/ui/mainwindow.cpp" line="585" />
       <source>Parent Imports — (root module)</source>
       <translation>父导入 — （根模块）</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="586" />
+      <location filename="../../src/ui/mainwindow.cpp" line="587" />
       <source>Exports — %1</source>
       <translation>导出 — %1</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="664" />
+      <location filename="../../src/ui/mainwindow.cpp" line="665" />
       <source>Expand Subtree</source>
       <translation>展开子树</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="666" />
+      <location filename="../../src/ui/mainwindow.cpp" line="667" />
       <source>Copy File Path</source>
       <translation>复制文件路径</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="667" />
+      <location filename="../../src/ui/mainwindow.cpp" line="668" />
       <source>Show in Explorer</source>
       <translation>在资源管理器中显示</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="668" />
+      <location filename="../../src/ui/mainwindow.cpp" line="669" />
       <source>View Module in External Viewer</source>
       <translation>用外部查看器打开模块</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="670" />
+      <location filename="../../src/ui/mainwindow.cpp" line="671" />
+      <source>Header Information...</source>
+      <translation>头部信息...</translation>
+    </message>
+    <message>
+      <location filename="../../src/ui/mainwindow.cpp" line="672" />
       <source>Locate in Module List</source>
       <translation>在模块列表中定位</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="716" />
+      <location filename="../../src/ui/mainwindow.cpp" line="723" />
       <source>Copy</source>
       <translation>复制</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="720" />
+      <location filename="../../src/ui/mainwindow.cpp" line="727" />
       <source>Copy Undecorated Name</source>
       <translation>复制反修饰名称</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="725" />
+      <location filename="../../src/ui/mainwindow.cpp" line="732" />
       <source>Disassemble...</source>
       <translation>反汇编...</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="822" />
+      <location filename="../../src/ui/mainwindow.cpp" line="829" />
       <source>Save Session</source>
       <translation>保存会话</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="822" />
+      <location filename="../../src/ui/mainwindow.cpp" line="829" />
       <source>QDepends Session (*.qds)</source>
       <translation>QDepends 会话 (*.qds)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="828" />
+      <location filename="../../src/ui/mainwindow.cpp" line="835" />
       <source>Cannot save session: %1</source>
       <translation>无法保存会话: %1</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="836" />
+      <location filename="../../src/ui/mainwindow.cpp" line="843" />
       <source>Save Report</source>
       <translation>保存报告</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="836" />
+      <location filename="../../src/ui/mainwindow.cpp" line="843" />
       <source>Text Files (*.txt)</source>
       <translation>文本文件 (*.txt)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="887" />
+      <location filename="../../src/ui/mainwindow.cpp" line="894" />
       <source>Report saved to %1</source>
       <translation>报告已保存至 %1</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="895" />
+      <location filename="../../src/ui/mainwindow.cpp" line="902" />
       <source>Export CSV</source>
       <translation>导出 CSV</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="895" />
+      <location filename="../../src/ui/mainwindow.cpp" line="902" />
       <source>CSV Files (*.csv)</source>
       <translation>CSV 文件 (*.csv)</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="923" />
+      <location filename="../../src/ui/mainwindow.cpp" line="930" />
       <source>CSV exported to %1</source>
       <translation>CSV 已导出至 %1</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="948" />
+      <location filename="../../src/ui/mainwindow.cpp" line="955" />
       <source>External Viewer</source>
       <translation>外部查看器</translation>
     </message>
     <message>
-      <location filename="../../src/ui/mainwindow.cpp" line="949" />
+      <location filename="../../src/ui/mainwindow.cpp" line="956" />
       <source>Command line (%1 is replaced with the module path):</source>
       <translation>命令行（%1 将被替换为模块路径）:</translation>
     </message>

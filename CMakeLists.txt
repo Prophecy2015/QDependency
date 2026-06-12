@@ -71,6 +71,8 @@ set(UI_SOURCES
     src/ui/findbar.cpp
     src/ui/sysinfodialog.cpp
     src/ui/sysinfodialog.h
+    src/ui/headerinfodialog.h
+    src/ui/headerinfodialog.cpp
     src/ui/logwidget.h
     src/ui/logwidget.cpp
 )
