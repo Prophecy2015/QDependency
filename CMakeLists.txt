@@ -11,6 +11,22 @@ endif()
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets LinguistTools)
 qt_standard_project_setup()
 
+# ---- Capstone (x86/x64 disassembler) via FetchContent, static, x86 only ----
+include(FetchContent)
+set(CAPSTONE_BUILD_SHARED OFF CACHE BOOL "" FORCE)
+set(CAPSTONE_BUILD_STATIC ON CACHE BOOL "" FORCE)
+set(CAPSTONE_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(CAPSTONE_BUILD_CSTOOL OFF CACHE BOOL "" FORCE)
+set(CAPSTONE_INSTALL OFF CACHE BOOL "" FORCE)
+set(CAPSTONE_ARCHITECTURE_DEFAULT OFF CACHE BOOL "" FORCE)
+set(CAPSTONE_X86_SUPPORT ON CACHE BOOL "" FORCE)
+FetchContent_Declare(capstone
+    GIT_REPOSITORY https://github.com/capstone-engine/capstone.git
+    GIT_TAG 5.0.1
+    GIT_SHALLOW TRUE
+)
+FetchContent_MakeAvailable(capstone)
+
 # ---- core: PE parsing / loader resolution, QtCore only ----
 set(CORE_SOURCES
     src/core/peinfo.h
@@ -66,6 +82,11 @@ if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/mainwindow.cpp)
         ${CORE_SOURCES}
         ${SESSION_SOURCES}
         ${UI_SOURCES}
+        # disassembly (links Capstone) — GUI target only, kept out of CORE_SOURCES
+        src/core/disasm.h
+        src/core/disasm.cpp
+        src/ui/disasmdialog.h
+        src/ui/disasmdialog.cpp
     )
 
     qt_add_resources(qdepends "theme"
@@ -74,7 +95,8 @@ if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/mainwindow.cpp)
     )
 
     target_include_directories(qdepends PRIVATE src)
-    target_link_libraries(qdepends PRIVATE Qt6::Widgets dbghelp version)
+    target_link_libraries(qdepends PRIVATE Qt6::Widgets dbghelp version capstone)
+    target_include_directories(qdepends PRIVATE ${capstone_SOURCE_DIR}/include)
 
     qt_add_translations(qdepends
         TS_FILES resources/i18n/qdepends_zh_CN.ts

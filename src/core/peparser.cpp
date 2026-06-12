@@ -580,5 +580,70 @@ std::shared_ptr<PeInfo> parsePeFile(const QString &filePath)
     return info;
 }
 
+QByteArray readImageBytesAtRva(const QString &filePath, uint32_t rva, uint32_t maxLen)
+{
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly))
+        return {};
+
+    QByteArray fallback;
+    const uchar *mapped = file.map(0, file.size());
+    const uint8_t *data;
+    size_t size;
+    if (mapped) {
+        data = mapped;
+        size = size_t(file.size());
+    } else {
+        fallback = file.readAll();
+        data = reinterpret_cast<const uint8_t *>(fallback.constData());
+        size = size_t(fallback.size());
+    }
+
+    PeReader r(data, size);
+    const auto *dos = r.ptr<IMAGE_DOS_HEADER>(0);
+    if (!dos || dos->e_magic != IMAGE_DOS_SIGNATURE)
+        return {};
+    const size_t ntOff = size_t(uint32_t(dos->e_lfanew));
+    const auto *sig = r.ptr<uint32_t>(ntOff);
+    if (!sig || *sig != IMAGE_NT_SIGNATURE)
+        return {};
+    const size_t fhOff = ntOff + 4;
+    const auto *fh = r.ptr<IMAGE_FILE_HEADER>(fhOff);
+    if (!fh)
+        return {};
+    const size_t ohOff = fhOff + sizeof(IMAGE_FILE_HEADER);
+    const auto *magic = r.ptr<uint16_t>(ohOff);
+    if (!magic)
+        return {};
+    const uint32_t sizeOfHeaders =
+        (*magic == IMAGE_NT_OPTIONAL_HDR64_MAGIC)
+            ? (r.ptr<IMAGE_OPTIONAL_HEADER64>(ohOff)
+                   ? r.ptr<IMAGE_OPTIONAL_HEADER64>(ohOff)->SizeOfHeaders : 0)
+            : (r.ptr<IMAGE_OPTIONAL_HEADER32>(ohOff)
+                   ? r.ptr<IMAGE_OPTIONAL_HEADER32>(ohOff)->SizeOfHeaders : 0);
+
+    const size_t secOff = ohOff + fh->SizeOfOptionalHeader;
+    std::vector<SectionRange> sections;
+    const uint32_t nSec = std::min<uint16_t>(fh->NumberOfSections, 384);
+    sections.reserve(nSec);
+    for (uint32_t i = 0; i < nSec; ++i) {
+        const auto *s = r.ptr<IMAGE_SECTION_HEADER>(secOff + i * sizeof(IMAGE_SECTION_HEADER));
+        if (!s)
+            break;
+        sections.push_back({s->VirtualAddress, s->Misc.VirtualSize,
+                            s->PointerToRawData, s->SizeOfRawData});
+    }
+    r.setSections(std::move(sections), sizeOfHeaders);
+
+    const size_t off = r.rvaToOff(rva);
+    if (off == kNpos)
+        return {};
+    const size_t avail = size > off ? size - off : 0;
+    const size_t len = std::min<size_t>(maxLen, avail);
+    if (len == 0)
+        return {};
+    return QByteArray(reinterpret_cast<const char *>(data + off), int(len));
+}
+
 } // namespace core
 

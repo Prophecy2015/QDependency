@@ -1,6 +1,8 @@
 #include "ui/mainwindow.h"
 
+#include "core/demangle.h"
 #include "session/sessionserializer.h"
+#include "ui/disasmdialog.h"
 #include "ui/findbar.h"
 #include "ui/iconfactory.h"
 #include "ui/logwidget.h"
@@ -706,13 +708,71 @@ void MainWindow::showTreeContextMenu(const QPoint &pos)
 
 void MainWindow::showTableContextMenu(QTableView *view, const QPoint &pos)
 {
+    const bool isFunctionPane = view == m_importView || view == m_exportView;
+
+    const QModelIndex clicked = view->indexAt(pos);
+
     QMenu menu(this);
     QAction *copyRows = menu.addAction(tr("Copy"));
+    QAction *copyUndecorated = nullptr;
+    QAction *disasm = nullptr;
+    if (isFunctionPane) {
+        copyUndecorated = menu.addAction(tr("Copy Undecorated Name"));
+        copyUndecorated->setEnabled(view->selectionModel()->hasSelection());
+    }
+    if (view == m_exportView) {
+        menu.addSeparator();
+        disasm = menu.addAction(tr("Disassemble..."));
+        disasm->setEnabled(clicked.isValid());
+    }
+    if (isFunctionPane) {
+        menu.addSeparator();
+        menu.addAction(m_actUndecorate);
+    }
+
     QAction *chosen = menu.exec(view->viewport()->mapToGlobal(pos));
+    if (disasm && chosen == disasm) {
+        const int srcRow = m_exportProxy->mapToSource(clicked).row();
+        showDisassembly(srcRow);
+        return;
+    }
     if (chosen == copyRows) {
         view->setFocus();
         copySelection();
+    } else if (copyUndecorated && chosen == copyUndecorated) {
+        QStringList names;
+        const auto rows = view->selectionModel()->selectedRows();
+        for (const QModelIndex &idx : rows) {
+            const auto *proxy = view == m_importView ? m_importProxy : m_exportProxy;
+            const int srcRow = proxy->mapToSource(idx).row();
+            QString name;
+            if (view == m_importView) {
+                if (const auto *ref = m_importModel->refAt(srcRow))
+                    name = ref->func.byOrdinal ? ref->func.displayName() : ref->func.name;
+            } else {
+                if (const auto *e = m_exportModel->entryAt(srcRow))
+                    name = e->name.isEmpty()
+                               ? QStringLiteral("Ordinal %1").arg(e->ordinal)
+                               : e->name;
+            }
+            if (!name.isEmpty())
+                names.append(core::demangleSymbol(name));
+        }
+        if (!names.isEmpty())
+            QApplication::clipboard()->setText(names.join(QLatin1Char('\n')));
     }
+}
+
+void MainWindow::showDisassembly(int exportSourceRow)
+{
+    const auto *node = nodeOf(m_tree->currentItem());
+    if (!node || !node->pe || !node->pe->valid)
+        return;
+    const auto *exp = m_exportModel->entryAt(exportSourceRow);
+    if (!exp)
+        return;
+    auto *dialog = new DisasmDialog(node->pe, *exp, this);
+    dialog->show();   // modeless: WA_DeleteOnClose set in the dialog
 }
 
 // ---------------------------------------------------------------- find

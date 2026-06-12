@@ -57,6 +57,7 @@ private:
     void copySelection();
     void showTreeContextMenu(const QPoint &pos);
     void showTableContextMenu(QTableView *view, const QPoint &pos);
+    void showDisassembly(int exportSourceRow);   // export pane source row
 
     // find
     void onSearchChanged(const QString &text);

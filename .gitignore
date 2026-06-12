@@ -1,3 +1,5 @@
 build/
 *.qds
 CMakeLists.txt.user
+QDepends-*.zip
+.claude/settings.local.json
