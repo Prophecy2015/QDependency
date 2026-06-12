@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     QApplication::setOrganizationName(QStringLiteral("QDepends"));
     QApplication::setApplicationName(QStringLiteral("QDepends"));
-    QApplication::setApplicationVersion(QStringLiteral("1.0.0"));
+    QApplication::setApplicationVersion(QStringLiteral("1.1.1"));
 
     app.setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
 
