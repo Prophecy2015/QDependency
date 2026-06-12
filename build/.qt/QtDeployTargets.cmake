@@ -1,6 +1,0 @@
-set(__QT_DEPLOY_TARGET_qdepends_FILE D:/Work/AIAssistent/Dependency/build/qdepends.exe)
-set(__QT_DEPLOY_TARGET_qdepends_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_qdepends_RUNTIME_DLLS D:/DevelopTools/Qt/Qt6.11/bin/Qt6Widgets.dll;D:/DevelopTools/Qt/Qt6.11/bin/Qt6Gui.dll;D:/DevelopTools/Qt/Qt6.11/bin/Qt6Core.dll)
-set(__QT_DEPLOY_TARGET_pedump_FILE D:/Work/AIAssistent/Dependency/build/pedump.exe)
-set(__QT_DEPLOY_TARGET_pedump_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_pedump_RUNTIME_DLLS D:/DevelopTools/Qt/Qt6.11/bin/Qt6Core.dll)

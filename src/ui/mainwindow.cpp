@@ -35,9 +35,27 @@
 #include <QUrl>
 #include <QVBoxLayout>
 
+#include <QScrollBar>
+
 namespace ui {
 
 namespace {
+
+// QTableView auto-scrolls horizontally to reveal the clicked cell, which makes
+// the function panes jump left/right on selection. Keep vertical auto-scroll
+// (needed for keyboard navigation) but pin the horizontal position.
+class NoHScrollTableView : public QTableView {
+public:
+    using QTableView::QTableView;
+
+protected:
+    void scrollTo(const QModelIndex &index, ScrollHint hint) override
+    {
+        const int x = horizontalScrollBar()->value();
+        QTableView::scrollTo(index, hint);
+        horizontalScrollBar()->setValue(x);
+    }
+};
 
 constexpr int kNodeRole = Qt::UserRole;
 constexpr int kMaxRecent = 8;
@@ -101,7 +119,7 @@ void MainWindow::buildPanes()
 
     const auto makeTable = [this](QAbstractTableModel *model,
                                   QSortFilterProxyModel *&proxy, int sortRole) {
-        auto *view = new QTableView;
+        QTableView *view = new NoHScrollTableView;
         proxy = new QSortFilterProxyModel(this);
         proxy->setSourceModel(model);
         proxy->setSortRole(sortRole);

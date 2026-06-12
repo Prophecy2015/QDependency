@@ -1,0 +1,3 @@
+build/
+*.qds
+CMakeLists.txt.user
